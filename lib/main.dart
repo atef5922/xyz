@@ -1,80 +1,74 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FirstUI());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FirstUI extends StatelessWidget {
+  const FirstUI({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              title: Text(
-                'Flutter Demo',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'IndieFlower',
-                  fontSize: 24.0,
-                ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Basic Flutter UI"),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text(
+              "4.0",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 50, 46, 46),
+                  fontSize: 30,
               ),
-              backgroundColor: Colors.grey[800],
             ),
-            body: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('4.0',
-                      style: TextStyle(fontSize: 40.0, color: Colors.grey)),
-                  
-                  Row(
-                    children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    Icon(
-                      Icons.star_border,
-                      color: Colors.grey,
-                      size: 40.0,
-                    ),
-                    ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Expanded(
+                  child: Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
                   ),
-                  SizedBox(height: 20.0),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero,
-                    ),
-                    ),
-                    child: const Text('SUBMIT'),
+                ),
+                const Flexible(
+                  fit: FlexFit.loose,
+                  flex: 3,
+                  child: Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.black,
                   ),
-                ],
-              ),
-            )));
+                ),
+                const Icon(
+                  Icons.star,
+                  size: 50,
+                  color: Colors.black,
+                ),
+                const Icon(
+                  Icons.star,
+                  size: 50,
+                  color: Colors.black,
+                ),
+                const Icon(
+                  Icons.star_border,
+                  size: 50,
+                  color: Color.fromARGB(255, 19, 18, 18),
+                ),
+                const Text(
+                  "submit",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

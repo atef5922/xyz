@@ -19,7 +19,7 @@ class FirstUI extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              "4.0",
+              "4.5",
               style: TextStyle(
                   color: Color.fromARGB(255, 50, 46, 46),
                   fontSize: 30,
@@ -31,7 +31,7 @@ class FirstUI extends StatelessWidget {
               children: [
                 const Expanded(
                   child: Icon(
-                    Icons.star,
+                    Icons.circle_notifications,
                     size: 50,
                     color: Colors.black,
                   ),
@@ -40,15 +40,15 @@ class FirstUI extends StatelessWidget {
                   fit: FlexFit.loose,
                   flex: 3,
                   child: Icon(
-                    Icons.star,
+                    Icons.heart_broken,
                     size: 50,
-                    color: Colors.black,
+                    color: Colors.red,
                   ),
                 ),
                 const Icon(
-                  Icons.star,
+                  Icons.heart_broken_outlined,
                   size: 50,
-                  color: Colors.black,
+                  color: Colors.red,
                 ),
                 const Icon(
                   Icons.star,
@@ -56,9 +56,9 @@ class FirstUI extends StatelessWidget {
                   color: Colors.black,
                 ),
                 const Icon(
-                  Icons.star_border,
+                  Icons.star_half,
                   size: 50,
-                  color: Color.fromARGB(255, 19, 18, 18),
+                  color: Colors.black,
                 ),
                 const Text(
                   "submit",
